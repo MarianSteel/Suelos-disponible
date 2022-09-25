@@ -1,0 +1,388 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: url("imagenes/Background.jpg");
+}
+
+header {
+    width: 100vw;
+    /* height: 10rem; */
+    background-color: #db3838;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#mainlogo {
+    width: 3rem;
+    height: 3rem;
+    margin: .5rem;
+    border: 2px solid yellow;
+
+}
+#mainlogo>a {
+    width: 3rem;
+    height: 3rem;
+    /* border: 2px solid yellow; */
+
+}
+
+#mainlogo>a>img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: 2px solid white;
+}
+
+#titulo {
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-size: .5rem;
+    font-weight: 100;
+    /* height: 4rem; */
+    border: 2px solid yellow;
+
+}
+
+#titulo>h1 {
+    border: 2px solid yellow;
+    margin-bottom: 0;
+}
+
+#titulo>h2 {
+    display: none;
+    /* border: 2px solid yellow;
+    margin-top: 0; */
+}
+
+#burgerMenu {
+    width: 2.5rem;
+    height: 2.5rem;
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    cursor: pointer;
+    padding: 0;
+}
+
+/* con la propiedad cursor pointer hacemos que el puntero del raton cambie a la mano con el dedo extendido dando entender al usuario que ese elemento del documento es clicable*/
+#burgerMenu>span {
+    width: 2.5rem;
+    height: .3rem;
+    background-color: white;
+    display: block;
+    border-radius: 10px;
+}
+
+/*Estas dos opciones corresponden a las 3 lineas que conforman el menu burger y que se transformará en una x. Lo hago block en lugar de flex para que los elementos permanezcan unidos en conjunto. Las opciones del navegacion del menú solo se verán al tocar la hamburguesa.Esa animación irá con jQuery. */
+
+#opcionesMenu {
+    display: none;
+    list-style: none;
+    text-align: right;
+    margin: 0;
+    background-color: #5874A6;
+    width: 10rem;
+    padding: 0;
+    position: absolute;
+    margin-left: -5.5rem;
+    margin-top: .2rem;
+    z-index: 1;
+}
+
+/*Para hacer que las opciones del menú no sean visibles hasta que el usuario pulse el boton de las tres lineas y ejecute el evento, las ocultaré con display none. La posición, además, hay que indicarla especificamente para que, al desplegarse, las opcines del menú queden perfectamente alineadas con la cabecera, anteponiendose a la imagen del banner principal. Esto lo consigo con position, y z-index.*/
+
+
+#opcionesMenu>li {
+    /* border: 2px solid red; */
+    padding: .5rem;
+    border-bottom: 1px solid #000000;
+}
+
+/*Con border-botton hago una separacion visual entre las opciones del menú*/
+#opcionesMenu>li:hover {
+    background-color: #000000;
+}
+
+/* Con el atributo hover conseguimos que el fondo del contenedor del menú de navegadión cambie de color cuando el usuario pasa el cursor sobre el, facilitandole la navegación. */
+
+#opcionesMenu>li>p {
+    /* border: 2px solid red; */
+    margin: 0;
+    margin-right: .5rem;
+    font-size: 1.3rem;
+}
+
+#opcionesMenu>li>p>a {
+    text-decoration: none;
+    color: white;
+
+}
+
+/* Estas últimas entradas corresponden a los estilos del menú una vez desplegado para navegación. Como son enlaces de navegación pero no quiero que aparezca la apariencia por defecto de un enlace, con la propiedad text-decoration modifico su estilo. */
+
+.primera {
+    transform: rotate(45deg) translateY(1.2rem);
+}
+
+.segunda {
+    opacity: 0;
+}
+
+.tercera {
+    transform: rotate(-45deg) translateY(-1.2rem);
+}
+
+section#principal{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+article#uno{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#principal>#uno>div#contenedorimagen{
+    border: 3px solid lightgreen;
+    width: 100%;
+    height: 75vh;
+}
+
+#principal>#uno>div#contenedorimagen>img#cabecera{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: .5;
+}
+
+#principal>#uno>div{
+    /* border: 2px solid #db3838; */
+    width: 20rem;
+}
+
+#principal>#uno>div#dos{
+    position: absolute;
+    top: 8rem;
+}
+
+#principal>#uno>div#tres{
+    position: absolute;
+    top: 30rem;
+}
+
+#principal>#uno>div>h2{
+    font-size: 2rem;
+    font-weight: 700;
+    font-size: 40px;
+}
+
+#principal>#button, #cuarta>#seis>#button{
+    /* border: 2px solid red; */
+    width: 15rem;
+    height: 4rem;
+    border-radius: 30px;
+    text-align: center; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    background-color: #db5252;
+    margin-top: 5rem;
+}
+#principal>#button>a,#cuarta>#seis>#button>a{
+    text-decoration: none;
+    color: aliceblue;
+    font-weight: 400;
+    font-size: large;
+    }
+/* Fin de la primera sección */
+section#secundaria{
+    margin-top: 4rem;
+}
+
+article#dos{
+    width: 100%;
+    border: 3px solid red;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+article#dos>div.segmento{
+    /* border: 3px solid blue; */
+    width: 100vw;
+    /* height: 50vh; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+article#dos>div#banner{
+    border: 3px solid green;
+
+}
+article#dos>div.segmento>img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.5;
+}
+
+article#dos>div#banner{
+    background-color: rgba(240, 248, 255, 0.721);
+    width: 22rem;
+    text-align: center;
+    border-radius: 20px;
+    position: absolute;
+    top: 72rem;
+}
+
+article#dos>div#banner>h3{
+    font-weight: 700;
+    color: #242424;
+}
+
+article#dos>div#banner>h4{
+    font-weight: 700;
+    color: #db5252;
+}
+
+article#dos>div.segmento>p{
+    width: 20rem;
+    font-size: 23px;
+}
+
+article#dos>div.segmento>p:first-child{
+    margin-top: 8rem;
+}
+
+article#dos>div.segmento>p>spam{
+    color: rgb(105, 105, 105);
+    font-weight: 700;
+}
+
+article#tres{
+    border: 3px solid blue;
+    text-align: center;
+    margin-top: 4rem;
+    background-color: #b2b2b259;
+    border-radius: 30px 30px;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    margin-top: 7rem;
+
+}
+
+article#tres>h3{
+    color: #db5252;
+    font-size: 30px;
+    margin-top: 3rem;
+}
+
+article#tres>h4{
+    color: rgb(105, 105, 105);
+    font-size: 20px;
+}
+
+article#tres>:nth-child(3){
+    font-size: 25px;
+}
+
+article#tres>:last-child{
+    font-size: 30px;
+}
+
+section#terciaria{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
+}
+
+#cuatro{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+section#terciaria>#cuatro>h2{
+    color: #242424;
+    font-size: 30px;
+    text-align: center;
+    margin-top: 10rem;
+    margin-bottom: 5rem;
+}
+
+#terciaria #cuatro div{
+    /* background-color: #db5252; */
+    border-radius: 30px 30px;
+    width: 20rem;
+    height: 20rem;
+    margin: 2rem;
+}
+
+.entrefoto{
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    color: #db5252;
+    width: 20rem;
+    height: 3px;
+}
+
+#terciaria #cuatro div img.flash{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 30px 30px;
+    cursor: pointer;
+}
+
+#terciaria #cinco h2{
+    margin-left: .5rem;
+    margin-top: 5rem;
+}
+.bajotitulo{
+    color: #db5252;
+    width: 20rem;
+    height: 2px;
+}
+
+#terciaria #cinco p{
+    width: 20rem;
+    font-size: 20px;
+}
+#cuarta{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#seis{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#seis p{
+    text-align: center;
+    width: 20rem;
+    margin-top: 5rem;
+    font-size: 20px;
+    font-weight: 700;
+    color: #db5252;
+
+}
